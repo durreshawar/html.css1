@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKEUP PRODUCTS</title>
+    <!--CSS-->
+    <Style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;  
+    }
+    a{
+        text-decoration: none;
+    }
+    .ul{
+        list-style: none;
+    }
+    .active{
+        color: whitesmoke;
+         font-weight: bold;
+
+    }
+    
+
+    /*navbar*/
+    .navbar{
+        border: 0px solid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+        color: whitesmoke;
+
+    }
+    .nav-link{
+        display: flex;
+        align-items: center;
+    }
+    .nav-link li{ 
+        margin: 0 30px;
+        position: relative;
+    }
+    .nav-link li a{
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+
+
+    }
+    .nav-link li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+
+    }
+    .nav-link li:hover::after{
+        width: 100%;
+    }
+
+
+
+    .header-content{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(makeup.jpg);
+        background-position: bottom;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .header-content{
+       
+        color: black;
+        text-align: center;
+        }
+        .header-content h1{
+            font-size: 7vmin;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .ctn{
+            padding: 8px 15px;
+            background: red;
+            border-radius: 30px;
+            color: black;
+        }
+       
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            background: #f2f2f2;
+        }
+        h3{
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            padding-top: 10px;
+
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+
+
+        }
+        .content{
+            width: 20%;
+            margin: 15px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+            transition: 0.4s;  
+            background: #f2f2f2;
+
+        }
+        .content:hover{
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16) 0 3px 6px rgba(0,0,0,0.23);
+            transform: translate(0px, -8px);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+
+        }
+        p{
+            text-align: center;
+            color: #b2bec3;
+            padding-top: 0 8px;
+
+        }
+        h6{
+            font-size: 26px;
+            text-align: center;
+            color: #222f3c;
+        }
+        button{
+            text-align: center;
+            font-size: 24px;
+            color: #009688;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            margin-top: 5px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+
+
+        }
+        
+        
+        @media(max-width:1000px){
+            .content{
+                width: 45%;
+
+            }
+
+        }
+        @media(max-width:750px){
+            .content{
+                width: 100%;
+
+
+            }
+            
+        }
+        .heading{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 20px auto;
+        }
+        .heading h1{
+            font-size: 50px;
+            color: #000;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .heading h1::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            display: block;
+            margin: 0 auto;
+            background-color: #4caf50;
+
+        }
+        .heading p{
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 35px;
+
+        }
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+        .about{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about-image{
+            flex: 1;
+            margin-right: 40px;
+            overflow: hidden;
+
+        }
+        .about-image img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.5s ease;
+        }
+        .about-content{
+            flex: 1;
+
+        }
+        .about-image:hover img{
+            transform: scale(1.2) ;
+        }
+        .about-content h2{
+            font-size: 23px;
+            margin-bottom: 15px;
+             color: #333;
+        }
+        .about-content p{
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+
+        }
+        .about-content .read-more{
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 19px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: 0.3 ease;
+        }
+        .about-content .read-more:hover{
+            background-color: #3e8e41;
+        }
+
+        
+        
+
+
+    
+       
+
+
+    </Style>
+    
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <h1 class="logo">MAKEUP</h1>
+        <ul class="nav-link">
+            <li class="active"><a href="Home"></a>Home</li>
+            <li><a href="About us"></a>About us</li>
+            <li><a href="Product"></a>Products</li>
+            <li><a href="contact us"></a>Contact us</li>
+        </ul>
+       
+    </nav>
+    <header>
+        <div class="header-content">
+          <h1>Makeup Make You More Beautiful</h1>
+          <br>
+             <a href="#" class="ctn">buy now</a>
+    </br>
+            
+        </div>
+    </header>
+    <!-- start ABOUT-->
+    <div class="heading">
+        <h1>About us</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non autem vero fuga sed impedit natus consectetur in, maxime hic magnam consequuntur ad modi odit ullam nulla facere totam laborum? Cupiditate!</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="makeup.jpg"
+            </div>
+            <div class="about-content">
+                <h2> EVERY ONE CHOOSE ITS</h2>
+                <P> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus commodi, quo eius velit tempora dolorum ratione excepturi blanditiis odit, quidem impedit qui incidunt quos quia non itaque cupiditate molestiae sunt iusto quod, facere dolorem explicabo! Ut optio odit, dolorem eveniet expedita temporibus ipsum debitis consequatur numquam aliquid quam at reiciendis repudiandae corporis in omnis dignissimos nam ab odio eos nisi voluptates itaque dolorum? Expedita ea, ad nihil at magnam adipisci, quam, eveniet ipsam sequi cumque necessitatibus rem. Fuga et soluta assumenda, a alias ratione, ad distinctio deserunt corrupti deleniti esse consectetur nostrum dignissimos repudiandae, delectus omnis blanditiis nesciunt. Velit, quia!</P>
+                <a href="" class="read-more">Read-More</a>
+            </div>
+        </section>
+    </div>
+    <!--End ABOUT-->
+    <!-- start Products--> 
+    <section title="products">
+         <!--heading start-->
+         <tr>
+            <td height="180" align="center" valign="middle" colspan="2">
+            
+                    <font face="arial" color="#f3971b" size="4" align="center">
+                        PRODUCTS
+                    </font>
+                    <hr width="70%" color="#f3971b">
+
+            
+            </td>
+        </tr>
+        <!--heading end-->
+   <div class="Products">
+    <div class="content">
+        <img src="eye.jpg" height="300px" width="300px">
+        <h3>EYESHADES</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$100</h6>
+        <button class="buy-1">Buy Now</button>
+    </div> 
+    <div class="content">
+        <img src="lose powder.webp" height="300px" width="300px">
+        <h3>LOOSE POWDER</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$80</h6>
+        <button class="buy-2">Buy Now</button>
+    </div>
+    <div class="content">
+        <img src="eyeshade 2.jpg" height="300px" width="300px">
+        <h3>GLITTER EYESHADES</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$50</h6>
+        <button class="buy-3">Buy Now</button>
+    </div> 
+    <div class="content">
+        <img src="LIPSTICKS2.webp" height="300px" width="300px">
+        <h3>LIPSTICKS SHADES</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$90</h6>
+        <button class="buy-4">Buy Now</button>
+    </div> 
+    <div class="content">
+        <img src="eyeshade.jpg" height="300px" width="300px">
+        <h3>EYESHADES PALTTE</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$65</h6>
+        <button class="buy-5">Buy Now</button>
+    </div> 
+    <div class="content">
+        <img src="lipsticks.webp" height="300px" width="300px">
+        <h3>LIPSTICKS</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+        <h6>$40</h6>
+        <button class="buy-6">Buy Now</button>
+    </div> 
+    <div class="content">
+    <img src="foundation.jpg" height="300px" width="300px">
+    <h3>FOUNDATION</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+    <h6>$60</h6>
+    <button class="buy-7">Buy Now</button>
+</div> 
+<div class="content">
+    <img src="lashes.webp" height="300px" width="300px">
+    <h3>EYELASH</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita.</p>
+    <h6>$20</h6>
+    <button class="buy-8">Buy Now</button>
+</div> 
+
+   </div>
+    </section>
+     <!--End Products--> 
+     <!--start contact us-->
+     <section class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="Contact-wrapper">
+            <div class="contact-form">
+                <h3>send us a message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="E-mail" name="e-mail" placeholder="Your email">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     </section>
+</body>
+</html>
